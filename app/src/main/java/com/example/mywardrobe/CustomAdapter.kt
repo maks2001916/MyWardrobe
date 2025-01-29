@@ -28,7 +28,7 @@ RecyclerView.Adapter<CustomAdapter.UserViewHolder>(){
 
     override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
         val clothing = clothes[position]
-        holder.imageCIV.setImageURI(clothing.image.toUri())
+        holder.imageCIV.setImageResource(clothing.image.toInt())
         holder.titleTV.text = clothing.title
         holder.descriptionTV.text = clothing.description
     }

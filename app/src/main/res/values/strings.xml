@@ -6,7 +6,7 @@
     <string name="jacket">Пиджак</string>
     <string name="jacket_description">Классический пиджак для любого случая</string>
     <string name="baseball_cap">Бейсболка</string>
-    <string name="baseball_cap_descruption">Удобная бейсболка для повседневного ношения</string>
+    <string name="baseball_cap_description">Удобная бейсболка для повседневного ношения</string>
     <string name="belt">Ремень</string>
     <string name="belt_description">Кожаный ремень для штанов</string>
     <string name="butterfly">Бабочка</string>
@@ -34,7 +34,7 @@
     <string name="tie">Галстук</string>
     <string name="tie_description">Элегантный галстук для офиса</string>
     <string name="trousers">Брюки</string>
-    <string name="trousers_descriprion">Классические брюки для формальных событий</string>
+    <string name="trousers_description">Классические брюки для формальных событий</string>
     <string name="undershirt">Майка</string>
     <string name="undershirt_description">Удобная майка для лета</string>
     <string name="wallet">Кошелек</string>
