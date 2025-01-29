@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.widget.Toolbar
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 class MyWardrobeActivity : AppCompatActivity() {
 
@@ -22,6 +23,7 @@ class MyWardrobeActivity : AppCompatActivity() {
     private fun init() {
         toolbarTB = findViewById(R.id.toolbarMyWardrobeTB)
         listRV = findViewById(R.id.listRV)
+        listRV.layoutManager = LinearLayoutManager(this)
         setSupportActionBar(toolbarTB)
     }
 }
