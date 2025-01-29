@@ -23,7 +23,7 @@
     <string name="sleeveless_vest_description">Легкая безрукавка для весны</string>
     <string name="slippers">Тапочки</string>
     <string name="slippers_description">Уютные тапочки для пляжа</string>
-    <string name="sneakers">sneakers</string>
+    <string name="sneakers">Кроссовки</string>
     <string name="sneakers_description">Стильные кроссовки для спорта</string>
     <string name="socks">Носки</string>
     <string name="socks_description">Мягкие носки для ежедневной носки</string>
@@ -43,4 +43,6 @@
     <string name="watch_description">Элегантные часы для любого наряда</string>
     <string name="windbreaker">Ветровка</string>
     <string name="windbreaker_description">Легкая ветровка для дождливой погоды</string>
+    <string name="exit">Выход</string>
+    <string name="start">К гардеробу</string>
 </resources>
