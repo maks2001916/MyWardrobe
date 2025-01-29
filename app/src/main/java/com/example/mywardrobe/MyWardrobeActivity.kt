@@ -1,5 +1,6 @@
 package com.example.mywardrobe
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
@@ -141,7 +142,11 @@ class MyWardrobeActivity : AppCompatActivity() {
         customAdapter.setOnClothingClickListener(object :
             CustomAdapter.OnClothingClickListener {
             override fun onClothingClick(clothing: Clothing, position: Int) {
-                TODO("Not yet implemented")
+                val intent = Intent(this@MyWardrobeActivity, ClothingInfoActivity::class.java)
+                intent.putExtra("image", clothing.image)
+                intent.putExtra("title", clothing.title)
+                intent.putExtra("description", clothing.description)
+                startActivity(intent)
             }
 
         })

@@ -10,7 +10,7 @@
 
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbarMyWardrobeTB"
+        android:id="@+id/toolbarInfoTB"
         app:title="@string/app_name_ru"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,7 +18,7 @@
 
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/imageCIV"
+        android:id="@+id/imageInfoCIV"
         android:layout_width="300dp"
         android:layout_height="300dp"
         android:layout_margin="10dp"
@@ -26,7 +26,7 @@
         android:src="@drawable/t_shirt_2_line"/>
 
     <TextView
-        android:id="@+id/titleTV"
+        android:id="@+id/titleInfoTV"
         android:text="@string/title"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -38,7 +38,7 @@
 
 
     <TextView
-        android:id="@+id/descriptionTV"
+        android:id="@+id/descriptionInfoTV"
         android:text="@string/description"
         android:textSize="30sp"
         android:textStyle="bold"
