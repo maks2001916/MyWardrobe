@@ -135,7 +135,16 @@ class MyWardrobeActivity : AppCompatActivity() {
         toolbarTB = findViewById(R.id.toolbarMyWardrobeTB)
         listRV = findViewById(R.id.listRV)
         listRV.layoutManager = LinearLayoutManager(this)
-        listRV.adapter = CustomAdapter(clothes)
+        val customAdapter = CustomAdapter(clothes)
+        listRV.adapter = customAdapter
+        listRV.setHasFixedSize(true)
+        customAdapter.setOnClothingClickListener(object :
+            CustomAdapter.OnClothingClickListener {
+            override fun onClothingClick(clothing: Clothing, position: Int) {
+                TODO("Not yet implemented")
+            }
+
+        })
         setSupportActionBar(toolbarTB)
 
     }
