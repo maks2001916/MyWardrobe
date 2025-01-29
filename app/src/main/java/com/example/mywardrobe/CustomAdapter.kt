@@ -4,18 +4,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.core.net.toUri
 import androidx.recyclerview.widget.RecyclerView
 import de.hdodenhof.circleimageview.CircleImageView
 
 class CustomAdapter(private val clothes: MutableList<Clothing>):
 RecyclerView.Adapter<CustomAdapter.UserViewHolder>(){
 
+    private var onClothingClickListener: OnClothingClickListener? = null
+
+    interface OnClothingClickListener {
+        fun onClothingClick(clothing: Clothing, position: Int)
+    }
     class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val imageCIV = itemView.findViewById<CircleImageView>(R.id.imageCIV)
         val titleTV = itemView.findViewById<TextView>(R.id.titleTV)
-        val descriptionTV = itemView.findViewById<TextView>(R.id.descriptionTV)
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
@@ -30,6 +32,15 @@ RecyclerView.Adapter<CustomAdapter.UserViewHolder>(){
         val clothing = clothes[position]
         holder.imageCIV.setImageResource(clothing.image.toInt())
         holder.titleTV.text = clothing.title
-        holder.descriptionTV.text = clothing.description
+        holder.itemView.setOnClickListener {
+            if (onClothingClickListener != null) {
+                onClothingClickListener!!.onClothingClick(clothing, position)
+            }
+        }
     }
+
+    fun setOnClothingClickListener(onClothingClickListener: OnClothingClickListener) {
+        this.onClothingClickListener = onClothingClickListener
+    }
+
 }
