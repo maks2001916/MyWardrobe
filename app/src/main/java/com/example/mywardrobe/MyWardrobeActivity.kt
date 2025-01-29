@@ -106,6 +106,8 @@ class MyWardrobeActivity : AppCompatActivity() {
         toolbarTB = findViewById(R.id.toolbarMyWardrobeTB)
         listRV = findViewById(R.id.listRV)
         listRV.layoutManager = LinearLayoutManager(this)
+        listRV.adapter = CustomAdapter(clothes)
         setSupportActionBar(toolbarTB)
+
     }
 }

@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun init() {
-        titleTV = findViewById(R.id.titleTV)
+        titleTV = findViewById(R.id.appNameTV)
         startBTN = findViewById(R.id.startBTN)
     }
 }
