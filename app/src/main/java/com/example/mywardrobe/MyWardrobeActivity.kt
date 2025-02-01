@@ -6,6 +6,7 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.widget.Toolbar
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -146,7 +147,9 @@ class MyWardrobeActivity : AppCompatActivity() {
                 intent.putExtra("image", clothing.image)
                 intent.putExtra("title", clothing.title)
                 intent.putExtra("description", clothing.description)
+                intent.putExtra("position", position)
                 startActivity(intent)
+                launchSomeActivity.launch(intent)
             }
 
         })
@@ -154,6 +157,24 @@ class MyWardrobeActivity : AppCompatActivity() {
 
     }
 
+    private val launchSomeActivity = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) {
+        result ->
+            if (result.resultCode == RESULT_OK) {
+                val data = result.data
+                val position = data?.getIntExtra("position", -1) ?: -1
+                val newTitle = data?.getStringExtra("editTitle") ?: ""
+                val newDescription = data?.getStringExtra("newDescription") ?: ""
+
+                if (position == -1) {
+                    clothes[position].title = newTitle
+                    clothes[position].description = newDescription
+                }
+
+                listRV.adapter?.notifyItemChanged(position)
+            }
+    }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.wardrobe_menu, menu)

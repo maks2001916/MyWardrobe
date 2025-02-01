@@ -45,4 +45,9 @@
     <string name="windbreaker_description">Легкая ветровка для дождливой погоды</string>
     <string name="exit">Выход</string>
     <string name="start">К гардеробу</string>
+    <string name="enter_title">Введите название</string>
+    <string name="enter_description">Введите описание</string>
+    <string name="update_record">Обновить запись</string>
+    <string name="update">Обновить</string>
+    <string name="cancel">Отмена</string>
 </resources>
