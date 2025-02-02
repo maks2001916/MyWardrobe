@@ -78,7 +78,7 @@ class ClothingInfoActivity : AppCompatActivity() {
                 intent = Intent()
                 intent.putExtra("editTitle", editTitle.text.toString())
                 intent.putExtra("editDescription", editDescription.text.toString())
-                intent.putExtra("position", intent.getIntExtra("position", -1))
+                intent.putExtra("position", position)
                 setResult(RESULT_OK, intent)
                 finish()
             }
