@@ -148,7 +148,7 @@ class MyWardrobeActivity : AppCompatActivity() {
                 intent.putExtra("title", clothing.title)
                 intent.putExtra("description", clothing.description)
                 intent.putExtra("position", position)
-                startActivity(intent)
+                //startActivity(intent)
                 launchSomeActivity.launch(intent)
             }
 

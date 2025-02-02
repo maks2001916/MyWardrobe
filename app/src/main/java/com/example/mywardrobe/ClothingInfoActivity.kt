@@ -82,8 +82,8 @@ class ClothingInfoActivity : AppCompatActivity() {
                 setResult(RESULT_OK, intent)
                 finish()
             }
-            dialog.setNegativeButton(getString(R.string.cancel)) { dialigInterface, _ ->
-                dialigInterface.dismiss()
+            dialog.setNegativeButton(getString(R.string.cancel)) { dialogInterface, _ ->
+                dialogInterface.dismiss()
             }
             dialog.show()
             false
