@@ -165,14 +165,14 @@ class MyWardrobeActivity : AppCompatActivity() {
                 val data = result.data
                 val position = data?.getIntExtra("position", -1) ?: -1
                 val newTitle = data?.getStringExtra("editTitle") ?: ""
-                val newDescription = data?.getStringExtra("newDescription") ?: ""
+                val newDescription = data?.getStringExtra("editDescription") ?: ""
 
                 if (position == -1) {
                     clothes[position].title = newTitle
                     clothes[position].description = newDescription
                 }
 
-                listRV.adapter?.notifyItemChanged(position)
+                (listRV.adapter as CustomAdapter).notifyItemChanged(position)
             }
     }
 
