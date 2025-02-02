@@ -33,9 +33,8 @@ RecyclerView.Adapter<CustomAdapter.UserViewHolder>(){
         holder.imageCIV.setImageResource(clothing.image.toInt())
         holder.titleTV.text = clothing.title
         holder.itemView.setOnClickListener {
-            if (onClothingClickListener != null) {
-                onClothingClickListener!!.onClothingClick(clothing, position)
-            }
+            onClothingClickListener?.onClothingClick(clothing, position)
+
         }
     }
 

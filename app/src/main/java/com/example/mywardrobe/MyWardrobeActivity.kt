@@ -144,9 +144,9 @@ class MyWardrobeActivity : AppCompatActivity() {
             CustomAdapter.OnClothingClickListener {
             override fun onClothingClick(clothing: Clothing, position: Int) {
                 val intent = Intent(this@MyWardrobeActivity, ClothingInfoActivity::class.java)
-                intent.putExtra("image", clothing.image)
-                intent.putExtra("title", clothing.title)
-                intent.putExtra("description", clothing.description)
+                intent.putExtra("image", clothes[position].image)
+                intent.putExtra("title", clothes[position].title)
+                intent.putExtra("description", clothes[position].description)
                 intent.putExtra("position", position)
                 //startActivity(intent)
                 launchSomeActivity.launch(intent)
@@ -167,7 +167,7 @@ class MyWardrobeActivity : AppCompatActivity() {
                 val newTitle = data?.getStringExtra("editTitle") ?: ""
                 val newDescription = data?.getStringExtra("editDescription") ?: ""
 
-                if (position == -1) {
+                if (position != -1) {
                     clothes[position].title = newTitle
                     clothes[position].description = newDescription
                 }
